@@ -5,7 +5,7 @@ var line = 5;
 
 for (var i = 0; i < line; i++) {
   var star = '';
-  for (var j = 5; j > i; j--) {
+  for (var j = line; j > i; j--) {
     star += '*';
   }
   star += '\n';
