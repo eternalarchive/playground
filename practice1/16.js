@@ -17,3 +17,16 @@ for (var i = 0; i < line; i++) {
   star += '\n';
   console.log(star);
 }
+
+// if문 없이 역삼각형 출력하기
+// for (var i = 0; i < line; i++) {
+//   var star = '';
+//   for (var j = 0; j < i; j++) {
+//     star += ' ';
+//   }
+//   for (var k = line * 2 - 1; k > i * 2; k--) {
+//     star += '*';
+//   }
+//   star += '\n';
+//   console.log(star);
+// }
