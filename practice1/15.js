@@ -17,3 +17,17 @@ for (var i = 0; i < line; i++) {
   star += '\n';
   console.log(star);
 }
+
+
+// if문 없이 정삼각형 출력하기 - 다시 해보자
+// for (var i = 0; i < line; i++) {
+//   var star = '';
+//   // for (var j = line * 2 - 1; j > i * 2; j--) {
+//   //   star += '0';
+//   // }
+//   for (var k = i * 2; k < line * 2 - 1; k++) {
+//     star += '*';
+//   }
+//   star += '\n';
+//   console.log(star);
+}
