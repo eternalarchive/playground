@@ -10,10 +10,7 @@ let todos = [
 
 function addTodo(newTodo) {
   // todos = [newTodo].concat(todos);
-  // return todos;
-
   todos = [newTodo, ...todos];
-  return todos;
 }
 
 addTodo({ id: 4, content: 'Test', completed: false });

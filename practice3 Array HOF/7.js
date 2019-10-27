@@ -9,8 +9,8 @@ let todos = [
 
 function toggleCompletedAll() {
   // eslint-disable-next-line no-return-assign
-  return todos.map(todo => todo.completed = true);
-  // todos = todos.map(todo => ({ ...todo, completed: true }));
+  // return todos.map(todo => todo.completed = true);
+  todos = todos.map(todo => ({ ...todo, completed: true }));
 }
 
 toggleCompletedAll();
