@@ -6,8 +6,9 @@
 
 function alphaString46(s) {
   const regexr = /^[0-9]{4,6}$/;
-  if (regexr.test(s)) return regexr.test(s);
   return regexr.test(s);
+  // if (regexr.test(s)) return regexr.test(s);
+  // return regexr.test(s);
 }
 
 console.log(alphaString46('1234')); // true
