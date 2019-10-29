@@ -8,8 +8,13 @@
 function getCount8 () {
   let count = 0;
   for (let i = 0; i <= 10000; i++) {
-    if ()
+    for (let j = 0; j < (i + '').length; j++) {
+      // console.log(i + '');
+      if ((i + '').charAt(j) === '8') ++count;
+      // console.log(count);
+    }
   }
+  return count;
 }
 
 console.log(getCount8()); // 4000
