@@ -5,7 +5,9 @@
 // 예를 들어 s가 ‘a234’이면 false를 리턴하고 ‘1234’라면 true를 리턴한다.
 
 function alphaString46(s) {
-
+  const regexr = /^[0-9]{4,6}$/;
+  if (regexr.test(s)) return regexr.test(s);
+  return regexr.test(s);
 }
 
 console.log(alphaString46('1234')); // true
