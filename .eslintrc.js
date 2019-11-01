@@ -15,6 +15,7 @@ module.exports = {
     // "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
     // "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
     // "no-var": 0,
+    "prefer-arrow-callback": 0,
     "max-classes-per-file": 0,
     "object-shorthand": 0,
     "vars-on-top": 0,
