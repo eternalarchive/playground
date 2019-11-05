@@ -45,17 +45,17 @@
     const $displayTime = document.querySelector('.display');
     const $btn = document.querySelector('.control');
     let btnText = false;
-    let minuite = 0;
+    let minute = 0;
     let second = 0;
     let milli = 0;
     let timeId = 0;
 
-    const printTime = (minuite, second, milli) => {
-      // console.log(milli, second, minuite);
+    const printTime = (minute, second, milli) => {
+      // console.log(milli, second, minute);
       milli = milli < 10 ? '0' + milli : milli;
       second = second < 10 ? '0' + second : second;
-      minuite = minuite< 10 ? '0' + minuite : minuite;
-      $displayTime.textContent = `${minuite}:${second}:${milli}`;
+      minute = minute < 10 ? '0' + minute : minute;
+      $displayTime.textContent = `${minute}:${second}:${milli}`;
     };
 
     const addTime = () => {
@@ -68,10 +68,10 @@
       }
       if (second >= 60) {
         second = 0;
-        minuite += 1;
+        minute += 1;
         second += 1;
       }
-      printTime(minuite, second, milli);
+      printTime(minute, second, milli);
     };
 
     const timeSet = () => {
