@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stop watch</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+    .stop-watch {
+      font-family: 'Source Code Pro', monospace;
+      text-align: center;
+      font-size: 3em;
+      padding: 30px;
+    }
+
+    .control {
+      width: 300px;
+      padding: 5px;
+      margin-top: 15px;
+      font-size: 36px;
+      font-weight: bold;
+      border: 2px solid #f44336;
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .control:hover {
+      background: #f44336;
+      color: aliceblue;
+    }
+  </style>
+  <title>Stop watch</title>
+</head>
+
+<body>
+  <div class="stop-watch">
+    <div class="display">00:00:00</div>
+    <button class="control">Start</button>
+  </div>
+  <script>
+    const $displayTime = document.querySelector('.display');
+    const $btn = document.querySelector('.control');
+    let btnText = false;
+    let minuite = 0;
+    let second = 0;
+    let milli = 0;
+    let timeId = 0;
+
+    const printTime = (minuite, second, milli) => {
+      // console.log(milli, second, minuite);
+      milli = milli < 10 ? '0' + milli : milli;
+      second = second < 10 ? '0' + second : second;
+      minuite = minuite< 10 ? '0' + minuite : minuite;
+      $displayTime.textContent = `${minuite}:${second}:${milli}`;
+    };
+
+    const addTime = () => {
+      // console.log('789');
+      milli += 1;
+      if (milli >= 100) {
+        milli = 0;
+        second += 1;
+        milli += 1;
+      }
+      if (second >= 60) {
+        second = 0;
+        minuite += 1;
+        second += 1;
+      }
+      printTime(minuite, second, milli);
+    };
+
+    const timeSet = () => {
+      // console.log('123');
+      if (!btnText) {
+        btnText = !btnText;
+        $btn.textContent = 'STOP';
+        addTime();
+        timeId = setInterval(addTime, 10);
+      } else {
+        btnText = !btnText;
+        $btn.textContent = 'START';
+        clearInterval(timeId);
+      }
+      console.log(btnText);
+    };
+
+    $btn.onclick = () => {
+      timeSet();
+    };
+  </script>
+</body>
+
+</html>
