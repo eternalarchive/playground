@@ -5,12 +5,11 @@
 function digitSum(n) {
   let answer = 0;
   if (n > 100000000) return false;
-  const stringArr = n + '';
-  const nArr = [...stringArr];
+  const nArr = [...(n + '')];
   nArr.forEach(n => answer += n * 1);
   return answer;
 }
 
-console.log(digitSum(123));  // 6
-console.log(digitSum(987));  // 24
-console.log(digitSum(100000001));  // false
+console.log(digitSum(123));
+console.log(digitSum(987));
+console.log(digitSum(100000001));
