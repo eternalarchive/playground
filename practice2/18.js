@@ -1,16 +1,11 @@
-// 18. 각 자릿수의 합 구하기
-// 정수 n이 주어지면, n의 각 자릿수의 합을 구해서 반환하는 digitSum 함수를 완성하라.
-// 예를 들어 n = 123이면 1 + 2 + 3 = 6을 반환한다. 단, n은 100,000,000 이하의 정수로 한다.
+// 18. 배열의 첫 요소와 마지막 요소로 배열 만들기
+// 배열의 첫 요소와 마지막 요소를 나타내는 정수를 인자로 받아 정수의 배열을 반환하는 함수를 완성하라.
+// 예를 들어 인수가 [10, 15]인 경우, [ 10, 11, 12, 13, 14, 15 ]를 반환한다.
 
-function digitSum(n) {
-  const arr = [...(n + '')];
-  // console.log(arr);
-  // console.log(arr.length);
-  if (n > 100000000) return false;
-  // eslint-disable-next-line no-lone-blocks
-  return arr.reduce((pre, cur) => +pre + +cur, 0);
+function generateRange(from, to) {
+  let res = [];
+  res = Array.from({ length: (to - from) + 1 }, (v, i) => from + i);
+  return res;
 }
 
-console.log(digitSum(123));  // 6
-console.log(digitSum(987));  // 24
-console.log(digitSum(100000001));  // false
+console.log(generateRange(10, 15));
