@@ -21,6 +21,8 @@ function toWeirdCase(s) {
     }
     answer += ' ';
   });
+
+  answer.substring(0, answer.length - 1);
   return answer;
 }
 
